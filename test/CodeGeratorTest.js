@@ -1,6 +1,7 @@
 const assert = require("assert");
 const {suite, test, setup, teardown} = require("mocha");
 const { CodeGenerator, CodeManager } = require('../code');
+const { Time } = require("../const/consts");
 
 suite('CodeGenerator', () => {
   test('#range', () => {
@@ -22,9 +23,11 @@ suite('CodeManager', () => {
   let codeManager;
   let params;
   setup(() => {
-    class FakeCodeGenerator {
-      currentIndex = 0;
-      codeList = ['code_1', 'code_2', 'code_3'];
+    class FakeGenerator {
+      constructor(prefix) {
+        this.currentIndex = 0;
+        this.codeList = [...Array(10)].map((_, index) => prefix + (index + 1));
+      }
 
       generate() {
         return this.codeList[this.currentIndex++];
@@ -32,7 +35,9 @@ suite('CodeManager', () => {
     }
 
     codeManager = new CodeManager({
-      codeGenerator: new FakeCodeGenerator(),
+      codeGenerator: new FakeGenerator('code_'),
+      accessTokenGenerator: new FakeGenerator('access_token_'),
+      refreshTokenGenerator: new FakeGenerator('refresh_token_'),
     });
 
     params = {
@@ -43,8 +48,9 @@ suite('CodeManager', () => {
   });
 
   test('code 발급 요청', async () => {
-    const code = await codeManager.createCode(params);
-    assert.equal(code, 'code_1');
+    assert.equal(await codeManager.createCode(params), 'code_1');
+    assert.equal(await codeManager.createCode(params), 'code_2');
+    assert.equal(await codeManager.createCode(params), 'code_3');
   });
 
   test('code 발급여부 확인', async () => {
@@ -55,10 +61,12 @@ suite('CodeManager', () => {
 
   test('발급된 code 검증', async () => {
     const requestedAt = Date.now();
-    const expiredAt = requestedAt + (10 * 1000);
+    const expiredAt = requestedAt + (10 * Time.SECOND);
     const code = await codeManager.createCode({ ...params, requestedAt });
-    assert.ok(codeManager.isValidCode({ code, requestedAt }));
-    assert.ok(codeManager.isValidCode({ code, requestedAt: expiredAt - 1 }));
+
+    assert.equal(codeManager.isValidCode({ code, requestedAt: requestedAt - 1 }), false);
+    assert.equal(codeManager.isValidCode({ code, requestedAt: requestedAt }), true);
+    assert.equal(codeManager.isValidCode({ code, requestedAt: expiredAt - 1 }), true);
     assert.equal(codeManager.isValidCode({ code, requestedAt: expiredAt }), false);
   });
 
@@ -71,36 +79,30 @@ suite('CodeManager', () => {
     }
   });
 
+  test('token 발급 요청', async () => {
+    const requestedAt = Date.now();
+    const expiredAt = requestedAt + (6 * Time.HOUR);
+    const code = await codeManager.createCode({ userId: 'u1234', clientId: '123' });
+    const { accessToken, refreshToken } = await codeManager.createTokenByCode({ code, requestedAt });
+    assert.equal(code, 'code_1');
+    assert.equal(accessToken, 'access_token_1');
+    assert.equal(refreshToken, 'refresh_token_1');
 
-  //
-  // test('token 발급 요청', () => {
-  //   const codeManager = new CodeManager({
-  //     codeGenerator: {
-  //       generate: () => {
-  //         return 'code_1234';
-  //       }
-  //     },
-  //     accessTokenGenerator: {
-  //       generate: () => {
-  //         return 'access_token_1234';
-  //       }
-  //     },
-  //     refreshTokenGenerator: {
-  //       generate: () => {
-  //         return 'refresh_token_1234';
-  //       }
-  //     }
-  //   });
-  //
-  //   const code = codeManager.createCode({ userId: 'u1234', clientId: '123' });
-  //   const token = codeManager.createTokenByCode(code);
-  //   const token = codeManager.createTokenByRefreshToken(code);
-  //
-  //   assert.equal(code, 'code1234');
-  //   assert.equal(token.accressToken, 'token1234');
-  // });
-  //
-  // test('token 재사용 요청 ~> code, token 파기하기', () => {
-  //
-  // });
+    assert.equal(codeManager.isValidAccessToken({ accessToken, requestedAt: requestedAt - 1 }), false);
+    assert.equal(codeManager.isValidAccessToken({ accessToken, requestedAt: requestedAt }), true);
+    assert.equal(codeManager.isValidAccessToken({ accessToken, requestedAt: expiredAt - 1 }), true);
+    assert.equal(codeManager.isValidAccessToken({ accessToken, requestedAt: expiredAt }), false);
+  });
+
+  test('발급되지 않은 code 로 token 을 얻는 경우', () => {
+    // TODO 에러
+  });
+
+  test('사용기간이 끝난 code 로 token 을 얻는 경우', () => {
+    // TODO 에러
+  });
+
+  test('token 재발금 요청 ~> code, token 파기하기', () => {
+
+  });
 });

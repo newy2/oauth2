@@ -15,7 +15,7 @@ module.exports = class RequestParamsValidator {
     'code',
   ];
 
-  constructor({ clientIds }) {
+  constructor({ clientIds } = {}) {
     if (! clientIds instanceof OAuthClientInfos) {
       throw new Error();
     }
@@ -23,7 +23,7 @@ module.exports = class RequestParamsValidator {
     this.clientIds = clientIds;
   }
 
-  async validate({ type, params }) {
+  async validate({ type, params } = {}) {
     this.getMandatoryList(type).forEach((each) => {
       if (! params[each]) {
         throw new Error('invalid_request');
