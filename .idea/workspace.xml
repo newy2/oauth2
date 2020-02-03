@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2dcf396b-304b-470f-abc9-47aa1f2203aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/const/consts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/CodeManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/CodeManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/RequestParamsValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/RequestParamsValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/OAuthClientInfos.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/OAuthClientInfos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CodeGeratorTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/CodeGeratorTest.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="LOCAL" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5663141">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/CodeGeratorTest.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="191">
+                  <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/code/RequestParamsValidator.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/model/OAuthClientInfos.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/8.10.0/core-modules/net.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="1133" column="15" selection-start-line="1133" selection-start-column="15" selection-end-line="1133" selection-end-column="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test/RequestParamsValidatorTest.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="113">
+                  <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/first.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="51">
+                  <caret line="3" selection-start-line="3" selection-end-line="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/code/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/code/CodeGenerator.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/CodeValidatorTest.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/model/FakeOAuthClientInfos.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/code/CodeManager.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/const/consts.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CodeManager.EXPIRED_AT</find>
+      <find>issuedAccessTokenList</find>
+      <find>EXPIRED_AT</find>
+      <find>createTokenByCode</find>
+      <find>range</find>
+      <find>digits</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>EXPIRED_AT</replace>
+      <replace>CODE_EXPIRED_AT</replace>
+      <replace>digits</replace>
+      <replace>range</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/code/RequestParamsValidator.js" />
+        <option value="$PROJECT_DIR$/model/OAuthClientInfos.js" />
+        <option value="$PROJECT_DIR$/const/consts.js" />
+        <option value="$PROJECT_DIR$/code/CodeManager.js" />
+        <option value="$PROJECT_DIR$/test/CodeGeratorTest.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="840" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectId" id="1WIIn7iWPQyKSLkCW4svMOvuJOE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="oauth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oauth" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580741330035" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yoon\Documents\Dev\oauth\code" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Yoon\Documents\Dev\oauth\code" />
+      <recent name="C:\Users\Yoon\Documents\Dev\oauth\model" />
+      <recent name="C:\Users\Yoon\Documents\Dev\oauth\test" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Mocha.테스트 실행">
+    <configuration name="base-invironment" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="redis" />
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="../docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="테스트 실행" type="mocha-javascript-test-runner" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>tdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory>$PROJECT_DIR$/test</test-directory>
+      <recursive>false</recursive>
+      <method v="2" />
+    </configuration>
+    <configuration name="Array" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/test/first.test.js</test-file>
+      <test-names>
+        <name value="Array" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Users.find by email" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/first.test.js</test-file>
+      <test-names>
+        <name value="Users" />
+        <name value="find by email" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test\first.test.js" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/test/first.test.js</test-file>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.base-invironment" />
+      <item itemvalue="Mocha.Array" />
+      <item itemvalue="Mocha.test\first.test.js" />
+      <item itemvalue="Mocha.Users.find by email" />
+      <item itemvalue="Mocha.테스트 실행" />
+      <item itemvalue="Node.js.bin\www" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Mocha.테스트 실행" />
+        <item itemvalue="Mocha.test\first.test.js" />
+        <item itemvalue="Mocha.Users.find by email" />
+        <item itemvalue="Mocha.Array" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.18456642" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:LOCAL" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="Compose: docker" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="Compose: docker" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="postgres" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dcf396b-304b-470f-abc9-47aa1f2203aa" name="Default Changelist" comment="" />
+      <created>1578830845162</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578830845162</updated>
+      <workItem from="1578830848694" duration="12986000" />
+      <workItem from="1579177271871" duration="2319000" />
+      <workItem from="1579428340441" duration="600000" />
+      <workItem from="1580201684851" duration="1903000" />
+      <workItem from="1580465615308" duration="254000" />
+      <workItem from="1580465904861" duration="1156000" />
+      <workItem from="1580467175689" duration="102000" />
+      <workItem from="1580467307055" duration="4424000" />
+      <workItem from="1580472956821" duration="12019000" />
+      <workItem from="1580545220621" duration="14687000" />
+      <workItem from="1580565140738" duration="22098000" />
+      <workItem from="1580731499482" duration="4766000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 28m 22s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 29m 10s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 29m 18s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 29m 25s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 29m 32s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 30m 07s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 30m 12s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 31m 50s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 31m 51s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="테스트_실행 - 2020.02.03 at 23h 32m 01s.xml">
+      <configuration name="테스트 실행" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4766000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="979" extended-state="6" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="npm" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" weight="0.23017621" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2753304" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2819383" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Redis Explorer" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Redis Servers" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="995" y="182" key="#Docker" timestamp="1580470433590">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="995" y="182" key="#Docker/0.0.1920.1040@0.0.1920.1040" timestamp="1580470433590" />
+    <state x="995" y="182" key="#New_Docker_Connection" timestamp="1580470241356">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="995" y="182" key="#New_Docker_Connection/0.0.1920.1040@0.0.1920.1040" timestamp="1580470241356" />
+    <state x="130" y="189" key="#Notifications" timestamp="1580468189965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="130" y="189" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1580468189965" />
+    <state x="912" y="181" key="#Path_mapping" timestamp="1580469538167">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="912" y="181" key="#Path_mapping/0.0.1920.1040@0.0.1920.1040" timestamp="1580469538167" />
+    <state x="846" y="182" key="#Port_bindings" timestamp="1580546969607">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="846" y="182" key="#Port_bindings/0.0.1920.1040@0.0.1920.1040" timestamp="1580546969606" />
+    <state x="794" y="223" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580559110197">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="223" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580559110197" />
+    <state x="1171" y="134" width="774" height="767" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1580586513796">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1171" y="134" width="774" height="767" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580586513796" />
+    <state x="1155" y="326" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580479118171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1155" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580479118171" />
+    <state width="869" height="466" key="DebuggerActiveHint" timestamp="1580587290400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="869" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1580587290400" />
+    <state x="1172" y="413" key="DockerComposeFileDialog" timestamp="1580545339156">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1172" y="413" key="DockerComposeFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580545339156" />
+    <state x="1068" y="285" key="EnvironmentVariablesDialog" timestamp="1580469623212">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1068" y="285" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580469623212" />
+    <state x="918" y="341" key="FileChooserDialogImpl" timestamp="1580559101835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="918" y="341" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580559101835" />
+    <state width="1429" height="205" key="GridCell.Tab.0.bottom" timestamp="1580589392625">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1429" height="205" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580589392625" />
+    <state width="1429" height="205" key="GridCell.Tab.0.center" timestamp="1580589392624">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1429" height="205" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580589392624" />
+    <state width="1429" height="205" key="GridCell.Tab.0.left" timestamp="1580589392624">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1429" height="205" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580589392624" />
+    <state width="1429" height="205" key="GridCell.Tab.0.right" timestamp="1580589392625">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1429" height="205" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580589392625" />
+    <state width="1318" height="317" key="GridCell.Tab.1.bottom" timestamp="1580587370470">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370470" />
+    <state width="1318" height="317" key="GridCell.Tab.1.center" timestamp="1580587370470">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370470" />
+    <state width="1318" height="317" key="GridCell.Tab.1.left" timestamp="1580587370470">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370470" />
+    <state width="1318" height="317" key="GridCell.Tab.1.right" timestamp="1580587370470">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370470" />
+    <state width="1318" height="317" key="GridCell.Tab.2.bottom" timestamp="1580587370471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370471" />
+    <state width="1318" height="317" key="GridCell.Tab.2.center" timestamp="1580587370471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370471" />
+    <state width="1318" height="317" key="GridCell.Tab.2.left" timestamp="1580587370471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370471" />
+    <state width="1318" height="317" key="GridCell.Tab.2.right" timestamp="1580587370471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370471" />
+    <state width="1318" height="317" key="GridCell.Tab.3.bottom" timestamp="1580587370471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370471" />
+    <state width="1318" height="317" key="GridCell.Tab.3.center" timestamp="1580587370471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370471" />
+    <state width="1318" height="317" key="GridCell.Tab.3.left" timestamp="1580587370471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370471" />
+    <state width="1318" height="317" key="GridCell.Tab.3.right" timestamp="1580587370471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1318" height="317" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580587370471" />
+    <state x="821" y="165" key="SettingsEditor" timestamp="1580552417617">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="821" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580552417617" />
+    <state x="107" y="67" width="745" height="912" key="find.popup" timestamp="1580586464047">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="107" y="67" width="745" height="912" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580586464047" />
+    <state x="150" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1580579437434">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="150" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580579437434" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/oauth.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/model/FakeOAuthClientInfos.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/CodeGenerator.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/OAuthClientInfos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CodeValidatorTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/8.10.0/core-modules/net.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="1133" column="15" selection-start-line="1133" selection-start-column="15" selection-end-line="1133" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/first.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/const/consts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/RequestParamsValidator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/CodeManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CodeGeratorTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/RequestParamsValidatorTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
