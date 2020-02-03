@@ -36,15 +36,15 @@ suite('1. 코드얻기 API params 확인', () => {
 
     for (const eachKey of mandatoryList) {
       const paramsClone = Object.assign({}, params);
-      assert.equal(Object.keys(paramsClone).length, 3);
+      assert.equal(3, Object.keys(paramsClone).length);
       delete paramsClone[eachKey];
-      assert.equal(Object.keys(paramsClone).length, 2);
+      assert.equal(2, Object.keys(paramsClone).length);
 
       try {
         await validator.validate({ type: 'code', params: paramsClone });
         assert.fail();
       } catch (e) {
-        assert.equal(e.message, 'invalid_request');
+        assert.equal('invalid_request', e.message);
       }
     }
   });
@@ -60,7 +60,7 @@ suite('1. 코드얻기 API params 확인', () => {
       });
       assert.fail();
     } catch (e) {
-      assert.equal(e.message, 'unsupported_response_type');
+      assert.equal('unsupported_response_type', e.message);
     }
   });
 
@@ -76,7 +76,7 @@ suite('1. 코드얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal(e.message, 'unauthorized_client');
+        assert.equal('unauthorized_client', e.message);
       }
     });
 
@@ -91,7 +91,7 @@ suite('1. 코드얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal(e.message, 'invalid_request');
+        assert.equal('invalid_request', e.message);
       }
     });
   });
@@ -137,9 +137,9 @@ suite('2. 토큰얻기 API params 확인', () => {
 
     for(const eachKey of tokenMandatoryList) {
       const paramsClone = Object.assign({}, params);
-      assert.equal(Object.keys(paramsClone).length, 5);
+      assert.equal(5, Object.keys(paramsClone).length);
       delete paramsClone[eachKey];
-      assert.equal(Object.keys(paramsClone).length, 4);
+      assert.equal(4, Object.keys(paramsClone).length);
 
       try {
         await validator.validate({
@@ -148,7 +148,7 @@ suite('2. 토큰얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal(e.message, 'invalid_request');
+        assert.equal('invalid_request', e.message);
       }
     }
   });
@@ -164,7 +164,7 @@ suite('2. 토큰얻기 API params 확인', () => {
       });
       assert.fail();
     } catch (e) {
-      assert.equal(e.message, 'unsupported_grant_type');
+      assert.equal('unsupported_grant_type', e.message);
     }
   });
 
@@ -180,7 +180,7 @@ suite('2. 토큰얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal(e.message, 'unauthorized_client');
+        assert.equal('unauthorized_client', e.message);
       }
     });
 
@@ -195,7 +195,7 @@ suite('2. 토큰얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal(e.message, 'unauthorized_client');
+        assert.equal('unauthorized_client', e.message);
       }
     });
 
@@ -210,7 +210,7 @@ suite('2. 토큰얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal(e.message, 'invalid_request');
+        assert.equal('invalid_request', e.message);
       }
     });
   });

@@ -6,6 +6,6 @@ test('camelcaseKeys', () => {
   const object = {
     response_type: 'code',
   };
-  assert.equal(camelcaseKeys(object).response_type, undefined);
-  assert.equal(camelcaseKeys(object).responseType, 'code');
+  assert.equal(undefined, camelcaseKeys(object).response_type);
+  assert.equal('code', camelcaseKeys(object).responseType);
 });

@@ -6,16 +6,16 @@ const { Time } = require("../const/consts");
 suite('CodeGenerator', () => {
   test('#range', () => {
     const range = (value) => Math.floor((value + 9) / 10);
-    assert.equal(range(1), 1);
-    assert.equal(range(10), 1);
-    assert.equal(range(11), 2);
+    assert.equal(1, range(1));
+    assert.equal(1, range(10));
+    assert.equal(2, range(11));
   });
 
   test('#generate', () => {
     const codeGenerator = new CodeGenerator(16);
     const code = codeGenerator.generate();
-    assert.equal(typeof code, 'string');
-    assert.equal(code.length, 16);
+    assert.equal('string', typeof code);
+    assert.equal(16, code.length);
   });
 });
 
@@ -48,9 +48,9 @@ suite('CodeManager', () => {
   });
 
   test('code 발급 요청', async () => {
-    assert.equal(await codeManager.createCode(params), 'code_1');
-    assert.equal(await codeManager.createCode(params), 'code_2');
-    assert.equal(await codeManager.createCode(params), 'code_3');
+    assert.equal('code_1', await codeManager.createCode(params));
+    assert.equal('code_2', await codeManager.createCode(params));
+    assert.equal('code_3', await codeManager.createCode(params));
   });
 
   test('code 발급여부 확인', async () => {
@@ -64,10 +64,10 @@ suite('CodeManager', () => {
     const expiredAt = requestedAt + (10 * Time.SECOND);
     const code = await codeManager.createCode({ ...params, requestedAt });
 
-    assert.equal(codeManager.isValidCode({ code, requestedAt: requestedAt - 1 }), false);
-    assert.equal(codeManager.isValidCode({ code, requestedAt: requestedAt }), true);
-    assert.equal(codeManager.isValidCode({ code, requestedAt: expiredAt - 1 }), true);
-    assert.equal(codeManager.isValidCode({ code, requestedAt: expiredAt }), false);
+    assert.equal(false, codeManager.isValidCode({ code, requestedAt: requestedAt - 1 }));
+    assert.ok(codeManager.isValidCode({ code, requestedAt: requestedAt }));
+    assert.ok(codeManager.isValidCode({ code, requestedAt: expiredAt }));
+    assert.equal(false, codeManager.isValidCode({ code, requestedAt: expiredAt + 1 }));
   });
 
   test('발급되지 않은 code 를 검증하는 경우', () => {
@@ -75,7 +75,7 @@ suite('CodeManager', () => {
       codeManager.isValidCode({ code: 'not_issued_code' });
       assert.fail();
     } catch(e) {
-      assert.equal(e.message, 'invalid_request');
+      assert.equal('invalid_request', e.message);
     }
   });
 
@@ -84,14 +84,15 @@ suite('CodeManager', () => {
     const expiredAt = requestedAt + (6 * Time.HOUR);
     const code = await codeManager.createCode({ userId: 'u1234', clientId: '123' });
     const { accessToken, refreshToken } = await codeManager.createTokenByCode({ code, requestedAt });
-    assert.equal(code, 'code_1');
-    assert.equal(accessToken, 'access_token_1');
-    assert.equal(refreshToken, 'refresh_token_1');
 
-    assert.equal(codeManager.isValidAccessToken({ accessToken, requestedAt: requestedAt - 1 }), false);
-    assert.equal(codeManager.isValidAccessToken({ accessToken, requestedAt: requestedAt }), true);
-    assert.equal(codeManager.isValidAccessToken({ accessToken, requestedAt: expiredAt - 1 }), true);
-    assert.equal(codeManager.isValidAccessToken({ accessToken, requestedAt: expiredAt }), false);
+    assert.equal('code_1', code);
+    assert.equal('access_token_1', accessToken);
+    assert.equal('refresh_token_1', refreshToken);
+
+    assert.equal(false, codeManager.isValidAccessToken({ accessToken, requestedAt: requestedAt - 1 }));
+    assert.ok(codeManager.isValidAccessToken({ accessToken, requestedAt: requestedAt }));
+    assert.ok(codeManager.isValidAccessToken({ accessToken, requestedAt: expiredAt }));
+    assert.equal(false, codeManager.isValidAccessToken({ accessToken, requestedAt: expiredAt + 1 }));
   });
 
   test('발급되지 않은 code 로 token 을 얻는 경우', () => {

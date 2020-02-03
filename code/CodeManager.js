@@ -60,7 +60,7 @@ module.exports = class CodeManager {
       throw new Error('invalid_request');
     }
 
-    return (issuedAccessToken.requestedAt <= requestedAt && requestedAt < issuedAccessToken.expiredAt);
+    return (issuedAccessToken.requestedAt <= requestedAt && requestedAt <= issuedAccessToken.expiredAt);
   }
 
   isValidCode({ code, requestedAt = Date.now() } = {}) {
@@ -69,7 +69,7 @@ module.exports = class CodeManager {
       throw new Error('invalid_request');
     }
 
-    return (issuedCode.requestedAt <= requestedAt && requestedAt < issuedCode.expiredAt);
+    return (issuedCode.requestedAt <= requestedAt && requestedAt <= issuedCode.expiredAt);
   }
 };
 
