@@ -44,7 +44,8 @@ suite('1. 코드얻기 API params 확인', () => {
         await validator.validate({ type: 'code', params: paramsClone });
         assert.fail();
       } catch (e) {
-        assert.equal('invalid_request', e.message);
+        assert.equal('invalid_request', e.errorCode);
+        assert.equal('파라미터가 잘못되었거나 요청문이 잘못되었습니다.', e.errorDescription);
       }
     }
   });
@@ -60,7 +61,8 @@ suite('1. 코드얻기 API params 확인', () => {
       });
       assert.fail();
     } catch (e) {
-      assert.equal('unsupported_response_type', e.message);
+      assert.equal('unsupported_response_type', e.errorCode);
+      assert.equal('정의되지 않은 반환 형식으로 요청했습니다.', e.errorDescription);
     }
   });
 
@@ -76,7 +78,8 @@ suite('1. 코드얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal('unauthorized_client', e.message);
+        assert.equal('unauthorized_client', e.errorCode);
+        assert.equal('인증받지 않은 인증 코드(authorization code)로 요청했습니다.', e.errorDescription);
       }
     });
 
@@ -91,7 +94,8 @@ suite('1. 코드얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal('invalid_request', e.message);
+        assert.equal('invalid_request', e.errorCode);
+        assert.equal('서버에 등록된 redirect_uri 와 전달받은 redirect_uri 가 다릅니다.', e.errorDescription);
       }
     });
   });
@@ -148,7 +152,8 @@ suite('2. 토큰얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal('invalid_request', e.message);
+        assert.equal('invalid_request', e.errorCode);
+        assert.equal('파라미터가 잘못되었거나 요청문이 잘못되었습니다.', e.errorDescription);
       }
     }
   });
@@ -164,7 +169,8 @@ suite('2. 토큰얻기 API params 확인', () => {
       });
       assert.fail();
     } catch (e) {
-      assert.equal('unsupported_grant_type', e.message);
+      assert.equal('unsupported_grant_type', e.errorCode);
+      assert.equal('정의되지 않은 권한 형식으로 요청했습니다.', e.errorDescription);
     }
   });
 
@@ -180,7 +186,8 @@ suite('2. 토큰얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal('unauthorized_client', e.message);
+        assert.equal('unauthorized_client', e.errorCode);
+        assert.equal('인증받지 않은 인증 코드(authorization code)로 요청했습니다.', e.errorDescription);
       }
     });
 
@@ -195,7 +202,8 @@ suite('2. 토큰얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal('unauthorized_client', e.message);
+        assert.equal('unauthorized_client', e.errorCode);
+        assert.equal('인증받지 않은 인증 코드(authorization code)로 요청했습니다.', e.errorDescription);
       }
     });
 
@@ -210,7 +218,8 @@ suite('2. 토큰얻기 API params 확인', () => {
         });
         assert.fail();
       } catch (e) {
-        assert.equal('invalid_request', e.message);
+        assert.equal('invalid_request', e.errorCode);
+        assert.equal('서버에 등록된 redirect_uri 와 전달받은 redirect_uri 가 다릅니다.', e.errorDescription);
       }
     });
   });

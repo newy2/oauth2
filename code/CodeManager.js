@@ -1,4 +1,5 @@
 const { Time } = require("../const/consts");
+const { ErrorFactory } = require("../errors");
 
 module.exports = class CodeManager {
   static CODE_EXPIRED_AT = 10 * Time.SECOND;
@@ -66,7 +67,7 @@ module.exports = class CodeManager {
   isValidCode({ code, requestedAt = Date.now() } = {}) {
     const issuedCode = this.issuedCodeList.find((each) => each.code === code);
     if (! issuedCode) {
-      throw new Error('invalid_request');
+      throw ErrorFactory.newInvalidRequest('발급된 authorization code 가 없습니다.');
     }
 
     return (issuedCode.requestedAt <= requestedAt && requestedAt <= issuedCode.expiredAt);

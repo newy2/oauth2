@@ -75,7 +75,8 @@ suite('CodeManager', () => {
       codeManager.isValidCode({ code: 'not_issued_code' });
       assert.fail();
     } catch(e) {
-      assert.equal('invalid_request', e.message);
+      assert.equal('invalid_request', e.errorCode);
+      assert.equal('발급된 authorization code 가 없습니다.', e.errorDescription);
     }
   });
 
