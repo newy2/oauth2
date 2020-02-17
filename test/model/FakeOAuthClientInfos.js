@@ -1,4 +1,4 @@
-const { OAuthClientInfos } = require('../../model');
+const { OAuthClientInfos } = require('../../dao');
 
 module.exports = class FakeOAuthClientInfos extends OAuthClientInfos {
   static createForTest() {

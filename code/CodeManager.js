@@ -1,5 +1,7 @@
 const { Time } = require("../const/consts");
 const { ErrorFactory } = require("../errors");
+const { TokenModel } = require('../model');
+const { TokenDao } = require('../dao');
 
 module.exports = class CodeManager {
   static CODE_EXPIRED_AT = 10 * Time.SECOND;
@@ -41,6 +43,7 @@ module.exports = class CodeManager {
     const refreshToken = this.refreshTokenGenerator.generate();
 
     const issuedCode = this.issuedAuthorizationList.find((each) => each.authorizationCode === authorizationCode);
+
     this.issuedTokenList.push({
       accessToken,
       refreshToken,
@@ -69,30 +72,42 @@ module.exports = class CodeManager {
   }
 
   isValidAuthorizationCode({ authorizationCode, requestedAt = Date.now() } = {}) {
-    const issuedCode = this.issuedAuthorizationList.find((each) => each.authorizationCode === authorizationCode);
-    if (! issuedCode) {
+    const code = this.issuedAuthorizationList.find((each) => each.authorizationCode === authorizationCode);
+    if (! code) {
       throw ErrorFactory.newInvalidRequest('발급된 authorization code 가 없습니다.');
     }
 
-    return (issuedCode.requestedAt <= requestedAt && requestedAt <= issuedCode.expiredAt);
+    return TokenModel.fromJson({
+      token: code.authorizationCode,
+      createdAt: code.requestedAt,
+      expiredAt: code.expiredAt,
+    }).isValid(requestedAt);
   }
 
   isValidAccessToken({ accessToken, requestedAt = Date.now() } = {}) {
-    const issuedAccessToken = this.issuedTokenList.find((each) => each.accessToken === accessToken);
-    if (! issuedAccessToken) {
+    const token = this.issuedTokenList.find((each) => each.accessToken === accessToken);
+    if (! token) {
       throw new Error('invalid_request');
     }
 
-    return (issuedAccessToken.requestedAt <= requestedAt && requestedAt <= issuedAccessToken.accessTokenExpiredAt);
+    return TokenModel.fromJson({
+      token: token.accessToken,
+      createdAt: token.requestedAt,
+      expiredAt: token.accessTokenExpiredAt,
+    }).isValid(requestedAt);
   }
 
   isValidRefreshToken({ refreshToken, requestedAt = Date.now() } = {}) {
-    const issuedAccessToken = this.issuedTokenList.find((each) => each.refreshToken === refreshToken);
-    if (! issuedAccessToken) {
+    const token = this.issuedTokenList.find((each) => each.refreshToken === refreshToken);
+    if (! token) {
       throw new Error('invalid_request');
     }
 
-    return (issuedAccessToken.requestedAt <= requestedAt && requestedAt <= issuedAccessToken.refreshTokenExpiredAt);
+    return TokenModel.fromJson({
+      token: token.refreshToken,
+      createdAt: token.requestedAt,
+      expiredAt: token.refreshTokenExpiredAt,
+    }).isValid(requestedAt);
   }
 };
 

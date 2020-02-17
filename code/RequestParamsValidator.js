@@ -1,4 +1,4 @@
-const OAuthClientInfos = require('../model/OAuthClientInfos');
+const OAuthClientInfos = require('../dao/OAuthClientInfos');
 const { ErrorFactory } = require('../errors');
 
 module.exports = class RequestParamsValidator {

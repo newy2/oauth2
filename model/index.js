@@ -1,3 +1,4 @@
 module.exports = {
-  OAuthClientInfos: require('./OAuthClientInfos'),
+  BaseModel: require('./BaseModel'),
+  TokenModel: require('./TokenModel'),
 };

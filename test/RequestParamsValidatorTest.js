@@ -36,7 +36,6 @@ suite('1. 코드얻기 API params 확인', () => {
 
     for (const eachKey of mandatoryList) {
       const paramsClone = Object.assign({}, params);
-      assert.equal(3, Object.keys(paramsClone).length);
       delete paramsClone[eachKey];
       assert.equal(2, Object.keys(paramsClone).length);
 
@@ -109,13 +108,13 @@ suite('2. 토큰얻기 API params 확인', () => {
       clientIds: FakeOAuthClientInfos.createForTest(),
     });
 
-    params = {
-      grantType: 'token',
-      clientId: '123',
-      clientSecret: 'abc',
-      redirectUri: 'https://example.com/callback',
+    params = camelcaseKeys({
+      grant_type: 'token',
+      client_id: '123',
+      client_secret: 'abc',
+      redirect_uri: 'https://example.com/callback',
       code: '0000',
-    }
+    });
   });
 
   test('에러 없음 - 필수 파라미터가 모두 있는 경우', async () => {
@@ -141,7 +140,6 @@ suite('2. 토큰얻기 API params 확인', () => {
 
     for(const eachKey of tokenMandatoryList) {
       const paramsClone = Object.assign({}, params);
-      assert.equal(5, Object.keys(paramsClone).length);
       delete paramsClone[eachKey];
       assert.equal(4, Object.keys(paramsClone).length);
 

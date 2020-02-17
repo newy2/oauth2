@@ -2,6 +2,7 @@ const assert = require("assert");
 const {suite, test, setup, teardown} = require("mocha");
 const { CodeGenerator, CodeManager } = require('../code');
 const { Time } = require("../const/consts");
+const { TokenDao } = require('../dao');
 
 suite('CodeGenerator', () => {
   test('#range', () => {
@@ -19,21 +20,21 @@ suite('CodeGenerator', () => {
   });
 });
 
+class FakeGenerator {
+  constructor(prefix) {
+    this.currentIndex = 0;
+    this.codeList = [...Array(10)].map((_, index) => prefix + (index + 1));
+  }
+
+  generate() {
+    return this.codeList[this.currentIndex++];
+  }
+}
+
 suite('CodeManager', () => {
   let codeManager;
   let params;
   setup(() => {
-    class FakeGenerator {
-      constructor(prefix) {
-        this.currentIndex = 0;
-        this.codeList = [...Array(10)].map((_, index) => prefix + (index + 1));
-      }
-
-      generate() {
-        return this.codeList[this.currentIndex++];
-      }
-    }
-
     codeManager = new CodeManager({
       codeGenerator: new FakeGenerator('code_'),
       accessTokenGenerator: new FakeGenerator('access_token_'),
@@ -47,23 +48,50 @@ suite('CodeManager', () => {
     };
   });
 
-  test('authorization code 발급 요청', async () => {
-    assert.equal('code_1', await codeManager.createAuthorizationCode(params));
-    assert.ok(await codeManager.isValidAuthorizationCode({ authorizationCode: 'code_1' }));
+  teardown(() => {
+    TokenDao.clear();
   });
 
-  test('같은 파라미터로 authorization code 발급 요청을 여러 번 한 경우, 과거에 발급된 code 는 폐기된다.', async () => {
-    assert.equal('code_1', await codeManager.createAuthorizationCode(params));
-    assert.equal('code_2', await codeManager.createAuthorizationCode(params));
-    assert.ok(await codeManager.isValidAuthorizationCode({ authorizationCode: 'code_2' }));
-    try {
-      await codeManager.isValidAuthorizationCode({ authorizationCode: 'code_1' });
-      assert.fail();
-    } catch (e) {
-      assert.equal('invalid_request', e.errorCode);
-      assert.equal('발급된 authorization code 가 없습니다.', e.errorDescription);
-    }
+  test('authorization code 발급 요청', async () => {
+    // await TokenModel.fromJson(params).insert();
+    const code = await TokenDao.setToken(null, {
+      ...params,
+      type: 100,
+      value: new FakeGenerator('code_').generate(),
+    });
+
+    assert.equal('code_1', code.getValue());
+    assert.ok(code.isValid());
+
+    // assert.equal('code_1', await codeManager.createAuthorizationCode(params));
+    // assert.ok(await codeManager.isValidAuthorizationCode({ authorizationCode: 'code_1' }));
   });
+
+  // test('같은 파라미터로 authorization code 발급 요청을 여러 번 한 경우, 과거에 발급된 code 는 폐기된다.', async () => {
+  //   await TokenDao.setToken(conn, params);
+  //   const code2 = await TokenDao.setToken(conn, params);
+  //   assert.equal('code_2', code2.value());
+  //   assert.ok(code2.valid());
+  //   try {
+  //     await TokenDao.getToken(conn, { code: 'code_1' });
+  //     c.valid();
+  //     assert.fail();
+  //   } catch (e) {
+  //     assert.equal('invalid_request', e.errorCode);
+  //     assert.equal('발급된 authorization code 가 없습니다.', e.errorDescription);
+  //   }
+  //
+  //   assert.equal('code_1', await codeManager.createAuthorizationCode(params));
+  //   assert.equal('code_2', await codeManager.createAuthorizationCode(params));
+  //   assert.ok(await codeManager.isValidAuthorizationCode({ authorizationCode: 'code_2' }));
+  //   try {
+  //     await codeManager.isValidAuthorizationCode({ authorizationCode: 'code_1' });
+  //     assert.fail();
+  //   } catch (e) {
+  //     assert.equal('invalid_request', e.errorCode);
+  //     assert.equal('발급된 authorization code 가 없습니다.', e.errorDescription);
+  //   }
+  // });
 
   test('authorizationCode 발급여부 확인', async () => {
     await codeManager.createAuthorizationCode(params);
